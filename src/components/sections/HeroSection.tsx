@@ -1,8 +1,8 @@
-import { ArrowUpRight, ArrowRight, FileText } from 'lucide-react';
+import { Fade } from '@/components/client/Fade';
 import { SITE } from '@/config/site';
 import { STATS } from '@/content';
 import { splitName } from '@/lib/format';
-import { Fade } from '@/components/client/Fade';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 /* ------------------------------------------------------------------ */
 /*  whoami terminal — content-rich right column                        */
@@ -41,11 +41,11 @@ function WhoamiTerminal() {
 
       <div className="space-y-2.5 px-5 py-5 text-[0.82rem] leading-[1.6]">
         <Line prompt="$" text="whoami" />
-        <Output text="senior software engineer — ui / frontend" />
-        <Line prompt="$" text="cat stack.txt" />
-        <Output text="react · relay · graphql · typescript · node" />
-        <Line prompt="$" text="status --now" />
-        <Output text="building AI editing surfaces @ microsoft" />
+        <Output text="software engineer · full-stack → ai" />
+        <Line prompt="$" text="cat now.txt" />
+        <Output text="building creative tools @ microsoft" />
+        <Line prompt="$" text="cat learning.txt" />
+        <Output text="agents · evals · retrieval · multi-agent systems" />
         <div className="flex h-4 items-center pt-1">
           <span className="inline-block h-3 w-2 animate-[blink_1s_steps(2,end)_infinite] bg-acid" />
         </div>
@@ -77,21 +77,11 @@ export function HeroSection() {
 
       <div className="mx-auto grid max-w-[1280px] items-start gap-12 md:grid-cols-[1.35fr_1fr] md:gap-16">
         <div>
-          <Fade>
-            <span className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/60 px-3.5 py-1.5 font-mono text-[0.72rem] tracking-[0.04em] text-acid backdrop-blur-sm">
-              <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-acid opacity-60" />
-                <span className="relative inline-flex size-2 rounded-full bg-acid" />
-              </span>
-              Senior Software Engineer · UI / Frontend Systems
-            </span>
-          </Fade>
-
           <Fade
             as="h1"
             variant="wipe"
             delay={80}
-            className="mt-9 text-[clamp(3.6rem,11vw,7.5rem)] font-medium leading-[0.92] tracking-[-0.035em]"
+            className="text-[clamp(3.6rem,11vw,7.5rem)] font-medium leading-[0.92] tracking-[-0.035em]"
           >
             {first}
             <br />
@@ -107,11 +97,10 @@ export function HeroSection() {
             delay={200}
             className="mt-7 max-w-[42ch] text-[1.08rem] leading-[1.55] text-grey"
           >
-            I design and engineer interface systems —{' '}
-            <span className="text-ink">Relay/GraphQL data layers</span>,{' '}
-            <span className="text-ink">AI editing surfaces</span>, and{' '}
-            <span className="text-ink">component architectures</span> shipped across
-            Microsoft 365.
+            <span className="text-ink">Full-stack engineer</span> by trade,{' '}
+            <span className="text-ink">teaching myself to build with AI</span> on the
+            side. I build creative tools at Microsoft and write about the journey at{' '}
+            <span className="text-ink">buildabytes</span>.
           </Fade>
 
           <Fade delay={300} className="mt-9 flex flex-wrap gap-3">
@@ -138,13 +127,7 @@ export function HeroSection() {
               <ArrowRight size={15} strokeWidth={2.2} aria-hidden="true" />
             </a>
 
-            <a
-              href="/resume.pdf"
-              className="inline-flex items-center gap-2 rounded-md border border-line bg-transparent px-5 py-3 text-[0.85rem] font-medium text-grey no-underline transition-colors duration-200 hover:border-mute hover:text-ink"
-            >
-              <FileText size={15} strokeWidth={1.8} aria-hidden="true" />
-              Résumé
-            </a>
+            {/* Résumé button removed until public/resume.pdf is in place. */}
           </Fade>
         </div>
 

@@ -4,9 +4,9 @@
  */
 export const SITE = {
   name: 'Divya Flick',
-  role: 'Software Engineer II at Microsoft',
+  role: 'Software Engineer at Microsoft',
   tagline:
-    'I design and engineer interface systems — Relay/GraphQL data layers, AI editing surfaces, and component architectures shipped across Microsoft 365.',
+    "Full-stack engineer by trade, teaching myself to build with AI on the side. I build creative tools at Microsoft and write about the journey at buildabytes.",
   url: 'https://divyaflick.com',
   email: 'hello@divyaflick.com',
   emailAlt: 'hello@buildabytes.net',
@@ -17,7 +17,7 @@ export const SITE = {
   region: 'GA',
   countryCode: 'US',
   description:
-    'Personal site of Divya Flick — Software Engineer II at Microsoft, building AI-powered creative tools. Frontend craft, performance, accessibility, and a deliberate path into AI engineering.',
+    "Personal site of Divya Flick — software engineer at Microsoft, teaching herself to build with AI. Notes on the full-stack-to-AI engineer path, written at buildabytes.",
 } as const;
 
 export type Site = typeof SITE;
