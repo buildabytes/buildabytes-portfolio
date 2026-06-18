@@ -1,0 +1,8 @@
+node_modules
+.next
+out
+build
+coverage
+.lighthouseci
+*.lock
+package-lock.json

@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ */
+/*  Design tokens — Graphite & Acid                                    */
+/* ------------------------------------------------------------------ */
+@theme {
+  /* Surfaces */
+  --color-paper: #0a0b0e;
+  --color-surface: #16181b;
+  --color-ink: #f3f3ef;
+
+  /* Accents */
+  --color-acid: #bef264;
+
+  /* Neutrals — --color-mute bumped to #8a8c92 for WCAG AA contrast
+     against --color-paper (was #6b6d72, ratio 4.3 — failed AA). */
+  --color-grey: #a5a59e;
+  --color-mute: #8a8c92;
+  --color-line: #26282d;
+  --color-faint: #1f2125;
+
+  /* Typography */
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html {
+    scroll-behavior: smooth;
+    background: var(--color-paper);
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--color-acid);
+    color: var(--color-paper);
+  }
+  :focus-visible {
+    outline: 2.5px solid var(--color-acid);
+    outline-offset: 2px;
+  }
+  main:focus {
+    outline: none;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  [data-fade] {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}
