@@ -7,9 +7,9 @@ export const SITE = {
   role: 'Software Engineer II at Microsoft',
   tagline:
     'I design and engineer interface systems — Relay/GraphQL data layers, AI editing surfaces, and component architectures shipped across Microsoft 365.',
-  url: 'https://buildabytes.net',
-  email: 'hello@buildabytes.net',
-  emailAlt: 'divyaflick@gmail.com',
+  url: 'https://divyaflick.com',
+  email: 'hello@divyaflick.com',
+  emailAlt: 'hello@buildabytes.net',
   github: 'https://github.com/buildabytes',
   linkedin: 'https://www.linkedin.com/in/divyajose',
   location: 'Atlanta, Georgia',
