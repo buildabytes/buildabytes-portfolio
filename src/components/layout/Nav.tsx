@@ -1,12 +1,13 @@
 'use client';
 
-import { Github, Linkedin } from 'lucide-react';
-import { SITE } from '@/config/site';
-import { NAV } from '@/config/nav';
-import { cn } from '@/lib/cn';
-import { padNum } from '@/lib/format';
+import { ThemeToggle } from '@/components/client/ThemeToggle';
 import { useScrollSpy } from '@/components/client/useScrollSpy';
 import { useScrolled } from '@/components/client/useScrolled';
+import { NAV } from '@/config/nav';
+import { SITE } from '@/config/site';
+import { cn } from '@/lib/cn';
+import { padNum } from '@/lib/format';
+import { Github, Linkedin } from 'lucide-react';
 
 const SECTION_IDS = NAV.map((n) => n.id);
 
@@ -58,7 +59,8 @@ export function Nav() {
         })}
       </nav>
 
-      <div className="flex gap-[13px]">
+      <div className="flex items-center gap-[13px]">
+        <ThemeToggle />
         <a
           href={SITE.github}
           aria-label="GitHub profile"
