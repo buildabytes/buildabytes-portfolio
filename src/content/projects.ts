@@ -15,5 +15,6 @@ export const PROJECTS = [
     blurb:
       'Built on Google ADK with specialist sub-agents for flights, hotels, attractions, and weather, coordinated by a root planner that synthesizes a full itinerary from a single user prompt.',
     tags: ['Python', 'Google ADK', 'Gemini', 'Multi-Agent'],
+    link: 'https://github.com/buildabytes/travel-planner',
   },
 ] as const satisfies ReadonlyArray<Project>;
