@@ -1,9 +1,9 @@
-import { ArrowUpRight } from 'lucide-react';
-import { PROJECTS } from '@/content';
-import { SITE } from '@/config/site';
 import { Fade } from '@/components/client/Fade';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { ProjectCard } from '@/components/ui/ProjectCard';
+import { SectionHeading } from '@/components/ui/SectionHeading';
+import { SITE } from '@/config/site';
+import { PROJECTS } from '@/content';
+import { ArrowUpRight } from 'lucide-react';
 
 export function ProjectsSection() {
   return (
@@ -11,7 +11,7 @@ export function ProjectsSection() {
       id="projects"
       className="mx-auto max-w-[1280px] scroll-mt-[60px] px-[5vw] py-[70px]"
     >
-      <SectionHeading num="03" title="Selected Projects" />
+      <SectionHeading num="03" title="AI Experiments" />
 
       <div className="border-t border-line">
         {PROJECTS.map((p, i) => (

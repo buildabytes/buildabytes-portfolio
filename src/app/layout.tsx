@@ -73,20 +73,26 @@ export const viewport: Viewport = {
 const personSchema = buildPersonSchema(SITE);
 
 /**
- * Inline script that runs BEFORE React hydrates. It reads the user's
+ * Inline script that runs BEFORE React hydrates. Reads the user's
  * saved theme (or falls back to their OS preference) and sets
  * <html data-theme="..."> synchronously, so the first paint already
- * shows the correct theme. No flash, no hydration mismatch.
+ * shows the correct theme.
+ *
+ * Default for first-time visitors is LIGHT. Once they toggle, the
+ * choice is saved to localStorage and respected on future visits.
+ *
+ * Because this mutates <html> before hydration, the <html> element
+ * is marked with `suppressHydrationWarning` — React knows the
+ * data-theme attribute is legitimately allowed to differ.
  */
 const noFlashScript = `
 (function() {
   try {
     var saved = localStorage.getItem('theme');
-    var preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    var theme = saved === 'light' || saved === 'dark' ? saved : preferred;
+    var theme = saved === 'light' || saved === 'dark' ? saved : 'light';
     document.documentElement.dataset.theme = theme;
   } catch (e) {
-    document.documentElement.dataset.theme = 'dark';
+    document.documentElement.dataset.theme = 'light';
   }
 })();
 `;
@@ -95,7 +101,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${archivo.variable} ${plexMono.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${archivo.variable} ${plexMono.variable}`}
+    >
       <head>
         <script
           // No-flash theme script. Must run before paint.
