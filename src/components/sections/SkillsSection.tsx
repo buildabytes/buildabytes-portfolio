@@ -1,10 +1,10 @@
-import { SKILLS } from '@/content';
 import { Fade } from '@/components/client/Fade';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { SKILLS } from '@/content';
 
 export function SkillsSection() {
   return (
-    <section className="mx-auto max-w-[1280px] px-[5vw] py-[70px]">
+    <section className="mx-auto max-w-[1280px] px-[5vw] py-[56px]">
       <SectionHeading num="04" title="Toolkit" />
 
       <div className="grid grid-cols-1 border-t border-line sm:grid-cols-2 lg:grid-cols-4">

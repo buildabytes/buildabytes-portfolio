@@ -1,7 +1,7 @@
-import { EXPERIENCE } from '@/content';
 import { Fade } from '@/components/client/Fade';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { TagList } from '@/components/ui/TagList';
+import { EXPERIENCE } from '@/content';
 
 const ROW =
   'group relative grid grid-cols-[96px_minmax(220px,1.5fr)_150px_1.4fr] items-start gap-[22px] border-b border-faint py-[18px] pl-[18px]';
@@ -19,7 +19,7 @@ export function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="mx-auto max-w-[1280px] scroll-mt-[60px] px-[5vw] py-[70px]"
+      className="mx-auto max-w-[1280px] scroll-mt-[60px] px-[5vw] py-[56px]"
     >
       <SectionHeading num="02" title="Experience" />
 

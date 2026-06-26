@@ -1,13 +1,13 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
-import { SITE } from '@/config/site';
 import { Fade } from '@/components/client/Fade';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { SITE } from '@/config/site';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export function ContactSection() {
   return (
     <section
       id="contact"
-      className="mx-auto max-w-[1280px] scroll-mt-[60px] px-[5vw] py-[70px]"
+      className="mx-auto max-w-[1280px] scroll-mt-[60px] px-[5vw] py-[56px]"
     >
       <SectionHeading num="05" title="Contact" />
 

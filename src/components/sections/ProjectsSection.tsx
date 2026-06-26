@@ -4,12 +4,12 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { SITE } from '@/config/site';
 import { PROJECTS } from '@/content';
 import { ArrowUpRight } from 'lucide-react';
-
+ 
 export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="mx-auto max-w-[1280px] scroll-mt-[60px] px-[5vw] py-[70px]"
+      className="mx-auto max-w-[1280px] scroll-mt-[60px] px-[5vw] py-[56px]"
     >
       <SectionHeading num="03" title="AI Experiments" />
 

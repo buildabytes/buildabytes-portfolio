@@ -1,6 +1,5 @@
 import { Fade } from '@/components/client/Fade';
 import { SITE } from '@/config/site';
-import { STATS } from '@/content';
 import { splitName } from '@/lib/format';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
@@ -135,27 +134,6 @@ export function HeroSection() {
           <WhoamiTerminal />
         </Fade>
       </div>
-
-      <Fade
-        delay={460}
-        className="mx-auto mt-20 grid max-w-[1280px] grid-cols-1 gap-y-8 border-t border-line pt-10 sm:grid-cols-3 sm:gap-x-12"
-      >
-        {STATS.map((s) => (
-          <div key={s.label} className="flex flex-col gap-1.5">
-            <div className="flex items-baseline gap-0.5">
-              <span className="text-[2.6rem] font-medium leading-none tracking-[-0.03em] text-ink">
-                {s.value.replace(/\+$/, '')}
-              </span>
-              {s.value.endsWith('+') && (
-                <span className="text-[2rem] font-medium leading-none text-acid">+</span>
-              )}
-            </div>
-            <span className="font-mono text-[0.72rem] uppercase tracking-[0.06em] text-mute">
-              {s.label}
-            </span>
-          </div>
-        ))}
-      </Fade>
     </section>
   );
 }

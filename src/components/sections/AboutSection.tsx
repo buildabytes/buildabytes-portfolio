@@ -1,7 +1,7 @@
-import { SITE } from '@/config/site';
-import type { Fact } from '@/types/content';
 import { Fade } from '@/components/client/Fade';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { SITE } from '@/config/site';
+import type { Fact } from '@/types/content';
 
 const FACTS: ReadonlyArray<Fact> = [
   ['Currently', 'AI creative tools, Microsoft'],
@@ -11,7 +11,7 @@ const FACTS: ReadonlyArray<Fact> = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="mx-auto max-w-[1280px] scroll-mt-[60px] px-[5vw] py-[70px]">
+    <section id="about" className="mx-auto max-w-[1280px] scroll-mt-[60px] px-[5vw] py-[56px]">
       <SectionHeading num="01" title="About" />
 
       <div className="grid gap-9 md:grid-cols-[1.7fr_1fr] md:gap-14">

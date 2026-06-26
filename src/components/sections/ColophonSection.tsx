@@ -1,8 +1,8 @@
-import { ArrowUpRight } from 'lucide-react';
-import { METRICS } from '@/content';
-import { SITE } from '@/config/site';
 import { Fade } from '@/components/client/Fade';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { SITE } from '@/config/site';
+import { METRICS } from '@/content';
+import { ArrowUpRight } from 'lucide-react';
 
 const SCORES = [
   { key: 'Performance', value: METRICS.performance },
@@ -44,7 +44,7 @@ const STACK = [
 
 export function ColophonSection() {
   return (
-    <section className="mx-auto max-w-[1280px] px-[5vw] py-[70px]">
+    <section className="mx-auto max-w-[1280px] px-[5vw] py-[56px]">
       <SectionHeading num="06" title="Colophon" />
 
       <Fade as="p" delay={60} className="mb-[30px] max-w-[54ch] text-[1.12rem] leading-[1.5] text-grey">
